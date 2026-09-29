@@ -1,4 +1,12 @@
-/* Общие стили */
+/* ===== Общие стили ===== */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,21 +17,29 @@ body {
     min-height: 100vh;
 }
 
-/* Шапка (Header) */
+/* ===== Шапка ===== */
 .header {
     width: 100%;
-    background-color: #6b9bd1; /* Цвет как на схеме */
+    background-color: #0d3b66;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    max-width: 960px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    color: #333;
+    padding: 0 15px;
 }
 
 .logo img {
-    border-radius: 50%; /* Круглый логотип */
+    border-radius: 50%;
     display: block;
+    background-color: #fff;
+    padding: 3px;
 }
 
 .site-title {
@@ -31,9 +47,10 @@ body {
     font-weight: bold;
     flex-grow: 1;
     margin-left: 20px;
+    color: #fff;
 }
 
-/* Меню (Nav) */
+/* ===== Меню ===== */
 .nav {
     display: flex;
     gap: 15px;
@@ -41,102 +58,146 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-weight: bold;
     font-size: 1.1em;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
 }
 
 .nav a:hover {
-    text-decoration: underline;
+    background-color: #5a3e2b;
+    text-decoration: none;
 }
 
-/* Основной контент */
+/* ===== Основной контент ===== */
 .content {
     width: 100%;
-    max-width: 960px; /* Максимальная ширина контента */
-    margin: 20px auto; /* Выравнивание по центру */
+    max-width: 960px;
+    margin: 20px auto;
     padding: 0 15px;
-    box-sizing: border-box;
     flex-grow: 1;
 }
 
-/* Секции (Список, Таблица, Форма) */
+/* ===== Секции ===== */
 .section {
-    background-color: #6b9bd1;
+    background-color: #0d3b66;
     margin-bottom: 20px;
     padding: 20px;
-    border-radius: 4px;
-    color: #000;
+    border-radius: 6px;
+    color: #fff;
+    scroll-margin-top: 80px;
 }
 
 .section h2 {
     margin-top: 0;
-    font-size: 1.2em;
+    font-size: 1.3em;
+    color: #fff;
+    border-bottom: 2px solid #5a3e2b;
+    padding-bottom: 5px;
 }
 
-/* Стили для таблицы */
+.section a {
+    color: #ffd9a0;
+}
+
+.section a:hover {
+    color: #fff;
+}
+
+/* ===== Таблица ===== */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
     background-color: #fff;
+    color: #000;
 }
 
 th, td {
-    border: 1px solid #333;
+    border: 1px solid #5a3e2b;
     padding: 8px;
     text-align: left;
 }
 
 th {
-    background-color: #4a7ab5;
+    background-color: #5a3e2b;
     color: #fff;
 }
 
-/* Чередование фона строк (четные/нечетные) */
 tbody tr:nth-child(even) {
-    background-color: #e0e0e0;
+    background-color: #f0e2d0;
 }
 
 tbody tr:nth-child(odd) {
     background-color: #ffffff;
 }
 
-/* Стили для формы */
+/* ===== Форма ===== */
 form {
     background-color: #fff;
+    color: #000;
     padding: 15px;
-    border-radius: 4px;
+    border-radius: 6px;
     margin-top: 10px;
 }
 
-input[type="text"], input[type="email"], input[type="date"], select, textarea {
+form label {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
     width: 100%;
-    padding: 5px;
-    margin-top: 5px;
-    box-sizing: border-box;
+    padding: 6px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: 1px solid #5a3e2b;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #0d3b66;
 }
 
 input[type="submit"] {
-    margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #4a7ab5;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0d3b66;
     color: #fff;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 input[type="submit"]:hover {
-    background-color: #333;
+    background-color: #5a3e2b;
 }
 
-/* Подвал (Footer) */
+/* ===== Подвал ===== */
 .footer {
     width: 100%;
-    background-color: #6b9bd1;
-    text-align: left;
-    padding: 15px 20px;
-    box-sizing: border-box;
+    background-color: #0d3b66;
+    padding: 15px 0;
+    border-top: 3px solid #5a3e2b;
+}
+
+.footer-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
     font-weight: bold;
-    color: #333;
+    color: #fff;
 }
