@@ -186,6 +186,28 @@ input[type="submit"]:hover {
     background-color: #5a3e2b;
 }
 
+/* ===== Кнопка "Наверх" ===== */
+.to-top {
+    text-align: center;
+    margin: 10px 0 30px;
+}
+
+.to-top a {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #5a3e2b;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.to-top a:hover {
+    background-color: #0d3b66;
+    transform: translateY(-2px);
+}
+
 /* ===== Подвал ===== */
 .footer {
     width: 100%;
